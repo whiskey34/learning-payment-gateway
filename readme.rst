@@ -8,39 +8,38 @@ and then run composer via terminal to install midtrans library at your root,
 to get vendor/ folder at your root.
 
 use this command : 
-```
-composer require midtrans/midtrans-php
-```
+
+`composer require midtrans/midtrans-php`
+
 
 After running the command, make sure to include the Composer autoloader in your project:
-```
-require 'vendor/autoload.php';
-```
+
+`require 'vendor/autoload.php';`
+
 
 Don't forget to changes config with your Midtrans access key at controller/Kasir.php
 
 and Done... you can try it by yourself!.. :D
 
-For any further info about midtras see the Documentation at 
+For any further info about midtras see the Documentation at `Midtrans Documentation <https://docs.midtrans.com>`
 
 Some Screenshot :
 
-![Alt Text](public/images/ss-1.png)
+![Alt Text](./public/images/ss-1.png)
 
-![Alt Text](public/images/ss-2.png)
+<img loading="lazy" width="30px" src="./public/images/ss-1.png" alt="ss-1 png"> <br>
+<img loading="lazy" width="30px" src="./public/images/ss-2.png" alt="ss-2 png"> <br>
+<img loading="lazy" width="30px" src="./public/images/ss-3.png" alt="ss-3 png"> <br>
+<img loading="lazy" width="30px" src="./public/images/ss-4.png" alt="ss-4 png"> <br>
+<img loading="lazy" width="30px" src="./public/images/ss-5.png" alt="ss-5 png"> <br>
 
-![Alt Text](public/images/ss-3.png)
 
-![Alt Text](public/images/ss-4.png)
-
-![Alt Text](public/images/ss-5.png)
-
-To login for admin :
-username = admindev
+To login for admin : &nbsp;
+username = admindev, &nbsp;
 password = 123
 
-for Kasir :
-username = Kasir
+for Kasir : &nbsp;
+username = Kasir, &nbsp;
 password = kasir
 
 
