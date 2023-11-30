@@ -12,9 +12,9 @@ class Kasir extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
-		Config::$serverKey = 'SB-Mid-server-vrECg5r6Fp3is40-kNGYx6fI';
-		Config::$clientKey = 'SB-Mid-client-oiKxuIaEuQvDEopC';
-		Config::$isProduction = false;
+		Config::$serverKey = 'your-midtrans-server-key';
+		Config::$clientKey = 'your-midtrans-client-key';
+		Config::$isProduction = false; //set true if your ready to production
 		Config::$isSanitized = true;
 		Config::$is3ds = true;
 

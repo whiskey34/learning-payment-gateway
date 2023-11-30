@@ -1,4 +1,50 @@
 ###################
+Simple integrating Payment gateway using MIDTRANS
+###################
+
+Download or clone this repo git clone https://github.com/whiskey34/learning-payment-gateway.git
+
+and then run composer via terminal to install midtrans library at your root,
+to get vendor/ folder at your root.
+
+use this command : 
+```
+composer require midtrans/midtrans-php
+```
+
+After running the command, make sure to include the Composer autoloader in your project:
+```
+require 'vendor/autoload.php';
+```
+
+Don't forget to changes config with your Midtrans access key at controller/Kasir.php
+
+and Done... you can try it by yourself!.. :D
+
+For any further info about midtras see the Documentation at 
+
+Some Screenshot :
+
+![Alt Text](public/images/ss-1.png)
+
+![Alt Text](public/images/ss-2.png)
+
+![Alt Text](public/images/ss-3.png)
+
+![Alt Text](public/images/ss-4.png)
+
+![Alt Text](public/images/ss-5.png)
+
+To login for admin :
+username = admindev
+password = 123
+
+for Kasir :
+username = Kasir
+password = kasir
+
+
+###################
 What is CodeIgniter
 ###################
 
@@ -18,12 +64,6 @@ This repo contains in-development code for future releases. To download the
 latest stable release please visit the `CodeIgniter Downloads
 <https://codeigniter.com/download>`_ page.
 
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
 *******************
 Server Requirements
@@ -42,26 +82,6 @@ Installation
 Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
 of the CodeIgniter User Guide.
 
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
 
 ***************
 Acknowledgement
