@@ -9,37 +9,54 @@ to get vendor/ folder at your root.
 
 use this command : 
 
-`composer require midtrans/midtrans-php`
+.. literal-block::
+
+   composer require midtrans/midtrans-php
 
 
 After running the command, make sure to include the Composer autoloader in your project:
 
-`require 'vendor/autoload.php';`
+.. literal-block::
+
+   require 'vendor/autoload.php';
 
 
 Don't forget to changes config with your Midtrans access key at controller/Kasir.php
 
 and Done... you can try it by yourself!.. :D
 
-For any further info about midtras see the Documentation at `Midtrans Documentation <https://docs.midtrans.com>`
+For any further info about midtras see the Documentation at `Midtrans Documentation <https://docs.midtrans.com>`_ .
 
 Some Screenshot :
 
-![Alt Text](./public/images/ss-1.png)
 
-<img loading="lazy" width="30px" src="./public/images/ss-1.png" alt="ss-1 png"> <br>
-<img loading="lazy" width="30px" src="./public/images/ss-2.png" alt="ss-2 png"> <br>
-<img loading="lazy" width="30px" src="./public/images/ss-3.png" alt="ss-3 png"> <br>
-<img loading="lazy" width="30px" src="./public/images/ss-4.png" alt="ss-4 png"> <br>
-<img loading="lazy" width="30px" src="./public/images/ss-5.png" alt="ss-5 png"> <br>
+.. image:: ./public/images/ss-1.png
+   :alt: ss-eshop
+
+.. image:: ./public/images/ss-2.png
+   :alt: ss-eshop
+
+.. image:: ./public/images/ss-3.png
+   :alt: ss-eshop
+
+.. image:: ./public/images/ss-4.png
+   :alt: ss-eshop
+
+.. image:: ./public/images/ss-5.png
+   :alt: ss-eshop
 
 
-To login for admin : &nbsp;
-username = admindev, &nbsp;
+
+To login for admin : 
+
+username = admindev,
+
 password = 123
 
-for Kasir : &nbsp;
-username = Kasir, &nbsp;
+for Kasir :
+
+username = Kasir,
+
 password = kasir
 
 
