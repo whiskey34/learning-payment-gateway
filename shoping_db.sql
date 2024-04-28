@@ -12,9 +12,9 @@ MySQL - 8.0.17 : Database - shoping_db
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`shoping_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-
-USE `porj4351_shopping_db`;
+USE `shoping_db`;
 
 /*Table structure for table `order_history` */
 
@@ -26,7 +26,7 @@ CREATE TABLE `order_history` (
   `status` varchar(150) NOT NULL,
   `timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   KEY `history_id` (`history_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `order_history` */
 
@@ -41,22 +41,8 @@ insert  into `order_history`(`history_id`,`order_id`,`status`,`timestamp`) value
 (8,19,'waiting payment','2023-11-12 15:10:47'),
 (9,20,'waiting payment','2023-11-12 15:10:49'),
 (10,21,'waiting payment','2023-11-12 16:43:02'),
-(11,22,'waiting payment','2023-11-12 16:55:39'),
-(12,23,'waiting payment','2023-11-12 17:11:17'),
-(13,24,'waiting payment','2023-11-13 11:43:34'),
-(14,25,'waiting payment','2023-11-13 11:44:59'),
-(15,26,'waiting payment','2023-11-13 11:47:34'),
-(16,27,'waiting payment','2023-11-13 11:49:15'),
-(17,28,'waiting payment','2023-11-13 16:24:31'),
-(18,29,'waiting payment','2023-11-13 18:12:33'),
-(20,31,'waiting payment','2023-11-14 09:24:56'),
-(21,32,'waiting payment','2023-11-14 09:25:37'),
-(22,33,'waiting payment','2023-11-14 09:47:38'),
-(25,36,'waiting payment','2023-11-14 10:27:44'),
-(27,38,'waiting payment','2023-11-14 10:32:13'),
-(28,39,'waiting payment','2023-11-14 10:33:47'),
-(29,40,'waiting payment','2023-11-14 10:35:08'),
-(30,41,'waiting payment','2023-11-14 10:37:12');
+(66,77,'waiting payment','2023-11-28 11:41:41'),
+(67,78,'waiting payment','2023-11-28 11:41:52');
 
 /*Table structure for table `order_items` */
 
@@ -69,7 +55,7 @@ CREATE TABLE `order_items` (
   `quantity` int(100) NOT NULL,
   `price` varchar(150) NOT NULL,
   KEY `ord_item_id` (`ord_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `order_items` */
 
@@ -109,7 +95,41 @@ insert  into `order_items`(`ord_item_id`,`order_id`,`product_id`,`quantity`,`pri
 (34,38,2,1,'Rp.6000'),
 (35,39,4,1,'Rp.15000'),
 (36,40,6,1,'Rp.8500'),
-(37,41,2,1,'Rp.6000');
+(37,41,2,1,'Rp.6000'),
+(38,45,2,1,'Rp.6000'),
+(39,45,4,1,'Rp.15000'),
+(40,47,1,2,'Rp.12000'),
+(41,47,4,1,'Rp.15000'),
+(42,48,1,1,'Rp.12000'),
+(43,49,1,1,'Rp.12000'),
+(44,50,1,2,'Rp.12000'),
+(45,51,1,1,'Rp.12000'),
+(46,52,1,2,'Rp.12000'),
+(47,53,1,2,'Rp.12000'),
+(48,54,4,1,'Rp.15000'),
+(49,56,1,1,'Rp.12000'),
+(50,57,4,1,'Rp.15000'),
+(51,58,1,2,'Rp.12000'),
+(52,59,1,1,'Rp.12000'),
+(53,60,1,3,'Rp.12000'),
+(54,61,1,2,'Rp.12000'),
+(55,62,1,1,'Rp.12000'),
+(56,63,1,1,'Rp.12000'),
+(57,64,1,2,'Rp.12000'),
+(58,65,1,2,'Rp.12000'),
+(59,66,1,2,'Rp.12000'),
+(60,67,4,1,'Rp.15000'),
+(61,68,1,1,'Rp.12000'),
+(62,69,1,1,'Rp.12000'),
+(63,70,1,1,'Rp.12000'),
+(64,71,1,1,'Rp.12000'),
+(65,72,1,2,'Rp.12000'),
+(66,73,1,2,'Rp.12000'),
+(67,74,1,1,'Rp.12000'),
+(68,75,1,1,'Rp.12000'),
+(69,76,17,1,'Rp.2300'),
+(70,77,16,1,'Rp.200'),
+(71,78,16,1,'Rp.200');
 
 /*Table structure for table `orders` */
 
@@ -126,11 +146,11 @@ CREATE TABLE `orders` (
   `city` varchar(150) NOT NULL,
   `shipping_cost` varchar(200) NOT NULL,
   `postcode` varchar(25) NOT NULL,
-  `status` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`created_at`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `orders` */
 
@@ -169,7 +189,39 @@ insert  into `orders`(`order_id`,`user_id`,`first_name`,`last_name`,`total_amoun
 (38,7,'del','no','11000','2023-12-22','matraman','jakarta','Rp. 5,000','12345','waiting payment','2023-11-14 10:32:13'),
 (39,7,'del','del','20000','2023-12-23','meikarta','jakarta','Rp. 5,000','12345','waiting payment','2023-11-14 10:33:47'),
 (40,7,'delf','ino','13500','2023-11-12','bsd','tangsel','Rp. 5,000','12304','waiting payment','2023-11-14 10:35:08'),
-(41,2,'fin','fin','11000','2023-12-13','penggilingan','jakarta','Rp. 5,000','13402','waiting payment','2023-11-14 10:37:12');
+(41,2,'fin','fin','11000','2023-12-13','penggilingan','jakarta','Rp. 5,000','13402','waiting payment','2023-11-14 10:37:12'),
+(45,7,'del','no','26000','2023-11-20','jl.bogor','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 09:38:46'),
+(47,7,'del','del','44000','2023-11-20','jl.bogor','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 10:02:41'),
+(48,7,'del','no','17000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 10:15:23'),
+(49,2,'del','no','17000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 10:16:22'),
+(50,7,'del','del','29000','2023-11-20','jl.bogor','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 10:34:11'),
+(51,2,'aku','doe','17000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 11:02:14'),
+(52,2,'del','fino','29000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 12:53:41'),
+(53,2,'del','fino','29000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 12:53:46'),
+(54,7,'kunto','aji','20000','2023-11-20','rumah ','jogja','Rp. 5,000','1234','waiting payment','2023-11-20 12:55:52'),
+(56,2,'del','del','5000','2023-11-20','jl.rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 15:10:44'),
+(57,7,'del','del','20000','2023-11-20','rumaku','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 15:34:28'),
+(58,2,'del','akbar','29000','2023-11-20','rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-20 15:48:36'),
+(59,2,'del','akbar','17000','2023-11-20','rumahku','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 15:50:12'),
+(60,7,'del','akbar','41000','2023-11-20','ada','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 15:59:11'),
+(61,7,'del','akbar','29000','2023-11-20','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 16:00:33'),
+(62,2,'delfin','akbar','17000','2023-11-20','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 16:45:27'),
+(63,7,'fin','akbar','17000','2023-11-20','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 17:28:45'),
+(64,2,'del','akbar','29000','2023-11-20','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 17:39:12'),
+(65,2,'deldel','akbar','29000','2023-11-20','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-20 17:53:10'),
+(66,2,'to','me','29000','2023-11-22','rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-22 13:16:33'),
+(67,7,'delfin','akbar','20000','2023-11-22','jl.pintas','bogor','Rp. 5,000','12345','waiting payment','2023-11-22 13:23:58'),
+(68,2,'del','akbar','5000','2023-11-22','pintas','bogor','Rp. 5,000','12345','waiting payment','2023-11-22 13:27:16'),
+(69,2,'del','akbar','17000','2023-11-22','rumah','jakarta','Rp. 5,000','12345','waiting payment','2023-11-22 13:28:21'),
+(70,2,'del','del','17000','2023-11-22','bsd','jakarta','Rp. 5,000','12345','waiting payment','2023-11-22 13:43:10'),
+(71,2,'del','bar','17000','2023-11-22','rumah','jakarta','Rp. 5,000','123','waiting payment','2023-11-22 13:47:13'),
+(72,7,'del','akbar','29000','2023-11-22','idem','jakarta','Rp. 5,000','12345','waiting payment','2023-11-22 13:59:35'),
+(73,7,'ak','bar','0','2023-11-22','idem','jakarta','Rp. 5,000','123','waiting payment','2023-11-22 14:12:19'),
+(74,2,'del','akbar','0','2023-11-23','rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-23 07:41:49'),
+(75,7,'del','akbar','0','2023-11-23','rumah','bogor','Rp. 5,000','12345','waiting payment','2023-11-23 08:04:22'),
+(76,2,'delfino','akbar','0','2023-11-23','rumahku','bogor','Rp. 5,000','12345','waiting payment','2023-11-23 08:22:24'),
+(77,7,'del','akbar','0','2023-11-28','rumah','bogor','Rp. 2,000','12341','waiting payment','2023-11-28 11:41:40'),
+(78,7,'del','akbar','0','2023-11-28','rumah','bogor','Rp. 2,000','12341','waiting payment','2023-11-28 11:41:51');
 
 /*Table structure for table `payments` */
 
@@ -184,7 +236,7 @@ CREATE TABLE `payments` (
   `payment_timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`payment_timestamp`),
   KEY `pay_id` (`pay_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `payments` */
 
@@ -199,22 +251,22 @@ CREATE TABLE `product` (
   `stock` int(100) NOT NULL,
   `description` varchar(150) NOT NULL,
   `supplier_id` int(10) NOT NULL,
-  `harga` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `harga` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`created_at`),
   KEY `product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `product` */
 
 insert  into `product`(`product_id`,`name`,`images`,`stock`,`description`,`supplier_id`,`harga`,`created_at`,`updated_at`) values 
-(1,'shampoo','',0,'keperluan mandi',2,'12000','2023-10-20 08:14:19',NULL),
-(2,'lays',NULL,2,'snack',1,'6000','2023-10-20 08:15:04',NULL),
-(4,'pepsoden',NULL,16,'keperluan mandi',2,'15000','2023-10-22 11:22:12',NULL),
+(1,'shampoo',NULL,50,'',1,'12000','2023-10-20 08:14:19','2023-11-23 01:21:12'),
+(2,'lays',NULL,50,'',1,'6000','2023-10-20 08:15:04','2023-11-23 01:53:56'),
+(4,'pepsoden',NULL,11,'keperluan mandi',2,'15000','2023-10-22 11:22:12',NULL),
 (6,'cimori baru','',2,'',6,'8500','2023-10-25 20:33:00','2023-10-25 14:27:07'),
-(16,'badge','./public/upload_img/0066ed8dc6157d5c660249b07ab42f22.png',1,'badge baju',1,'200','2023-11-02 09:27:03',NULL),
-(17,'kue','./public/upload_img/b3e2db084a9ac2d8ce0073d5be404a60.jpg',3,'kue',6,'2300','2023-11-02 09:59:45',NULL);
+(16,'badge',NULL,48,'',1,'200','2023-11-02 09:27:03','2023-11-23 01:54:51'),
+(17,'kue','./public/upload_img/b3e2db084a9ac2d8ce0073d5be404a60.jpg',2,'kue',6,'2300','2023-11-02 09:59:45',NULL);
 
 /*Table structure for table `supplier` */
 
@@ -230,7 +282,7 @@ CREATE TABLE `supplier` (
   `updated` datetime DEFAULT NULL,
   PRIMARY KEY (`created`),
   KEY `supplier_id` (`supplier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `supplier` */
 
@@ -254,7 +306,7 @@ CREATE TABLE `user` (
   `level` int(1) DEFAULT NULL COMMENT '1.Admin, 2.Kasir',
   `address` varchar(200) DEFAULT NULL,
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `user` */
 
